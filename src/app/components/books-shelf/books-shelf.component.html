@@ -1,0 +1,111 @@
+<table
+    *ngIf="(bookList$ | async) as books; else loading"
+    class="table"
+>
+    <thead>
+        <tr>
+            <th>
+                <div class="th-wrapper">
+                    <span>Title</span>
+                    <div class="button-wrapper">
+                        <button
+                            class="button up"
+                            type="button"
+                            (click)="sort('title', sortOrder.ascending)"
+                        >
+                            <img src="assets/chevron.svg" alt="chevron">
+                        </button>
+                        <button
+                            class="button down"
+                            type="button"
+                            (click)="sort('title', sortOrder.descending)"
+                        >
+                            <img src="assets/chevron.svg" alt="chevron">
+                        </button>
+                    </div>
+                </div>
+            </th>
+            <th>
+                <div class="th-wrapper">
+                    <span>Description</span>
+                    <div class="button-wrapper">
+                        <button
+                            class="button up"
+                            type="button"
+                            (click)="sort('description', sortOrder.ascending)"
+                        >
+                            <img src="assets/chevron.svg" alt="chevron">
+                        </button>
+                        <button
+                            class="button down"
+                            type="button"
+                            (click)="sort('description', sortOrder.descending)"
+                        >
+                            <img src="assets/chevron.svg" alt="chevron">
+                        </button>
+                    </div>
+                </div>
+            </th>
+            <th>
+                <div class="th-wrapper">
+                    <span>Page count</span>
+                    <div class="button-wrapper">
+                        <button
+                            class="button up"
+                            type="button"
+                            (click)="sort('pageCount', sortOrder.ascending)"
+                        >
+                            <img src="assets/chevron.svg" alt="chevron">
+                        </button>
+                        <button
+                            class="button down"
+                            type="button"
+                            (click)="sort('pageCount', sortOrder.descending)"
+                        >
+                            <img src="assets/chevron.svg" alt="chevron">
+                        </button>
+                    </div>
+                </div>
+            </th>
+            <th>
+                <div class="th-wrapper">
+                    <span>Publish date</span>
+                    <div class="button-wrapper">
+                        <button
+                            class="button up"
+                            type="button"
+                            (click)="sort('publishDate', sortOrder.ascending)"
+                        >
+                            <img src="assets/chevron.svg" alt="chevron">
+                        </button>
+                        <button
+                            class="button down"
+                            type="button"
+                            (click)="sort('publishDate', sortOrder.descending)"
+                        >
+                            <img src="assets/chevron.svg" alt="chevron">
+                        </button>
+                    </div>
+                </div>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let book of books">
+            <td>{{ book?.title }}
+            </td>
+            <td>
+                {{ book?.description }}
+            </td>
+            <td>
+                {{ book?.pageCount }}
+            </td>
+            <td>
+                {{ book?.publishDate | date:'dd.MM.yyyy' }}
+            </td>
+        </tr>
+    </tbody>
+</table>
+<ng-template #loading>
+    <div>Loading...</div>
+</ng-template>

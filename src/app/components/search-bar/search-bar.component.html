@@ -1,0 +1,22 @@
+<form [formGroup]="searchForm">
+    <div>
+        <label class="visually-hidden" for="search">Search</label>
+        <input
+            class="search-input"
+            type="text"
+            name="search"
+            formControlName="search"
+            placeholder="Type something to start searching..."
+        />
+    </div>
+    <div formGroupName="searchBy" class="radio-wrapper">
+        <label class="label">
+            <input type="radio" name="criteria" [value]="searchBy.byTitle" formControlName="criteria" />
+            by book title
+        </label>
+        <label class="label">
+            <input type="radio" name="criteria" [value]="searchBy.byDescription" formControlName="criteria" />
+            by book description
+        </label>
+    </div>
+</form>

@@ -1,0 +1,9 @@
+body {
+    font-family: var(--ff-400);
+    font-weight: var(--fw-400);
+    font-size: var(--fs-400);
+    line-height: var(--lh-400);
+
+    background-color: var(--clr-light-400);
+    color: var(--clr-dark-400);
+}

@@ -1,0 +1,20 @@
+.search-input {
+    display: block;
+    width: 100%;
+    padding: calc(var(--gap) * 4);
+    border-radius: 4px;
+    border: 1px solid;
+    border-color: var(--clr-dark-400);
+}
+.search-input:focus-within {
+    outline: 1px solid var(--clr-accent-400);
+    border-color: var(--clr-accent-400);
+}
+
+.radio-wrapper {
+    margin-top: calc(var(--gap) * 5);
+}
+
+.label {
+    font-size: var(--fs-300);
+}

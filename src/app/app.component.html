@@ -1,0 +1,22 @@
+<app-header [logo]="'The Simposter\'s Bookstore'"></app-header>
+<app-container>
+    <section class="section">
+        <div class="app-wrapper">
+            <app-search-bar></app-search-bar>
+            <div class="app-button-wrapper">
+                <a class="to-chart" href="#chart">To chart</a>
+                <button
+                    (click)="download()"
+                    class="export-button"
+                    type="button"
+                >
+                    Export as EXEL sheet
+                </button>
+            </div>
+        </div>
+        <app-books-shelf></app-books-shelf>
+    </section>
+    <section class="section">
+        <app-statistic></app-statistic>
+    </section>
+</app-container>

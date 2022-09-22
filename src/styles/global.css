@@ -1,0 +1,27 @@
+/* .danger, .warning, .success {
+    color: var(--clr-light-400);
+} */
+
+.danger {
+    color: var(--clr-danger);
+}
+.warning {
+    color: var(--clr-warning);
+}
+.success {
+    color: var(--clr-success);
+}
+
+.section {
+    padding-top: calc(var(--gap) * 20);
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

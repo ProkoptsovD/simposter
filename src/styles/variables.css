@@ -1,0 +1,29 @@
+:root {
+    /* typography */
+
+    --ff-400: 'Roboto Mono', monospace;
+    
+    --fs-400: 16px;
+    --fs-300: 12px;
+    
+    --fw-400: 400;
+    --lh-400: 1.2;
+
+    /* colors */
+    --clr-accent-400: #daa520;
+
+    --clr-neutral-400: #cacaca;
+    --clr-neutral-300: #dcdcdc;
+
+    --clr-light-400: #ffffff;
+
+    --clr-dark-400: #8b8b8b;
+    --clr-dark-500: #686868;
+
+    --clr-danger: #F32013;
+    --clr-warning: #F0D500;
+    --clr-success: #00843D;
+
+    /* spacing */
+    --gap: 2px;
+}
