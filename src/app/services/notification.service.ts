@@ -7,12 +7,14 @@ import { ErrorNotification } from 'src/app/models/notification-service.models';
 })
 export class NotificationService {
 
-  error: ErrorNotification | null = null;
+  private error: ErrorNotification | null = null;
+  private timeoutId!: any;
 
   constructor() {}
 
   setError(message: string): void {
-    this.error = { id: nanoid(), message }
+    this.error = { id: nanoid(), message };
+    this.clearErrorAsync();
   }
   
   getError(): ErrorNotification | null {
@@ -20,8 +22,9 @@ export class NotificationService {
   }
   clearError(): void {
     this.error = null;
+    clearTimeout(this.timeoutId);
   }
-  clearErrorAsync(delay: number = 1000) {
-    setTimeout(() => this.clearError(), delay)
+  clearErrorAsync(delay: number = 2000) {
+    this.timeoutId = setTimeout(() => this.clearError(), delay)
   }
 }

@@ -1,15 +1,15 @@
-/* .danger, .warning, .success {
+.danger, .warning, .success {
     color: var(--clr-light-400);
-} */
+}
 
 .danger {
-    color: var(--clr-danger);
+    background-color: var(--clr-danger);
 }
 .warning {
-    color: var(--clr-warning);
+    background-color: var(--clr-warning);
 }
 .success {
-    color: var(--clr-success);
+    background-color: var(--clr-success);
 }
 
 .section {

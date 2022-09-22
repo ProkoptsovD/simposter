@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Book } from './models/book.models';
 import { ExportFileService } from './services/export-file.service';
+import { NotificationService } from './services/notification.service';
 import { booksSelectors } from './store/books/books.selectors';
 
 @Component({
@@ -16,7 +17,8 @@ export class AppComponent implements OnInit {
 
   constructor(
     private store: Store,
-    public exportFileService: ExportFileService
+    public exportFileService: ExportFileService,
+    public notificationService: NotificationService
   ) {}
 
   ngOnInit() {

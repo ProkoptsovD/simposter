@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NotificationService } from 'src/app/services/notification.service';
 
 @Component({
@@ -8,10 +8,13 @@ import { NotificationService } from 'src/app/services/notification.service';
 })
 export class ErrorComponent implements OnInit {
 
-  @Input() errorMessage: string = 'Ups, something went wrong'
+  public errorMessage: string | null | undefined = '';
+
   constructor(private notificationService: NotificationService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.errorMessage = this.notificationService.getError()?.message;
+  }
 
   onClick() {
     this.notificationService.clearError();
